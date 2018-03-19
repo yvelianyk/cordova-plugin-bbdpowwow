@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-bbdpowwow",
+  "version": "1.0.0",
+  "description": "Powwow plugin for Blackberry Dynamics",
+  "cordova": {
+    "id": "cordova-plugin-bbdpowwow",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "",
+  "license": "MIT"
+}
