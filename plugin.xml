@@ -13,6 +13,70 @@
   </engines>
 
   <platform name="ios">
+    <header-file src="src/ios/GDAppDelegate.h"/>
+    <source-file src="src/ios/GDAppDelegate.m"/>
+    <header-file src="src/ios/AppDelegate.h"/>
+    <source-file src="src/ios/AppDelegate.m"/>
+    <header-file src="src/ios/PWGDWebSocket.h"/>
+    <source-file src="src/ios/PWGDWebSocket.m"/>
+    <header-file src="src/ios/PWHttpHelper.h"/>
+    <source-file src="src/ios/PWHttpHelper.m"/>
+    <header-file src="src/ios/PWWebSocketProxy.h"/>
+    <source-file src="src/ios/PWWebSocketProxy.m"/>
+    <header-file src="src/ios/PWEventHandler.h"/>
+    <source-file src="src/ios/PWEventHandler.m"/>
+    <header-file src="src/ios/ViewController.h"/>
+    <source-file src="src/ios/ViewController.m"/>
+    <header-file src="src/ios/Constants.h"/>
+    
+    <resource-file src="src/ios/GDAssets.bundle" />
+    
+    <project src="src/ios/PocketSocketLib/PocketSocket.xcodeproj" />
+    <framework src="/Library/Frameworks/GD.framework" custom="true"/>
+    <framework src="LocalAuthentication.framework" />
+    <framework src="CFNetwork.framework" />
+    <framework src="CoreData.framework" />
+    <framework src="CoreTelephony.framework" />
+    <framework src="QuartzCore.framework" />
+    <framework src="Security.framework" />
+    <framework src="MessageUI.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="MobileCoreServices.framework" />
+    <framework src="CoreGraphics.framework" />
+    <framework src="AssetsLibrary.framework" />
+    <framework src="libz.tbd" />
+    <framework src="libstdc++.tbd" />
+    <framework src="libstdc++.6.0.9.tbd" />
+    <framework src="libicucore.tbd" />
+    
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLName</key>
+          <string>com.powwow.internalapps</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>com.powwow.internalapps.sc2.1.0.0.0</string>
+            <string>com.powwow.internalapps.sc2</string>
+            <string>com.good.gd.discovery</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+    
+    <config-file target="*-Info.plist" parent="GDApplicationID">
+      <string>powwow</string>
+    </config-file>
+    
+    <config-file target="*-Info.plist" parent="GDApplicationVersion">
+      <string>1.0.0.0</string>
+    </config-file>
+    
+    <config-file target="*-Info.plist" parent="GDConsoleLogger">
+      <string>GDFilterDetailed</string>
+    </config-file>
   </platform>
 
 </plugin>
